@@ -1,0 +1,418 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+   
+    
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #FFEBC9;
+}
+.intro{
+   background-color: #FFEBC9;
+  color:#670000;
+  padding:30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  height:85vh;
+}
+.brand{
+    font-family: 'Cedarville Cursive', cursive;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 5px;
+    background-color: #FFEBC9;
+}
+.r-nav ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.r-nav li{
+    list-style:none;
+    margin:10px;
+}
+.r-nav a{
+    text-decoration: none;
+    padding:1rem;
+    display: block;
+    color:#000;
+}
+.toggle-button{
+    position: absolute;
+    top:2.3rem;
+    right:1rem;
+    display:none;
+    flex-direction: column;
+    justify-content: space-between;
+    width:30px;
+    height:21px;
+}
+.toggle-button .bar{
+    height:3px;
+    width:100%;
+    border-radius: 10px;
+    background-color: black;
+}
+
+.r-nav li a{
+    transition: all 0.3s ease 0s;
+
+}
+.r-nav li a:hover{
+
+    color:#ff7300;
+    
+}
+.connect-btn{
+    background-color: #670000;
+    
+    padding:0px;
+
+}
+.connect-btn a{
+    color:white;
+}
+.connect-btn:hover{
+    cursor: pointer;
+}
+.brand{
+    font-size: 20px;
+}
+/* Navbar css ends*/
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.name{
+    font-size:50px;
+}
+.about h1,.skills h1,.projects h1,.experience ,.accomplishments h1,.footer h1{
+    color:#670000;
+    margin:30px 0px;
+}
+.about{
+    padding:30px;
+}
+.square{
+    position: absolute;
+    width:20px;
+    height:20px;
+    border: 3px solid #FF2626;
+    bottom:20px;
+    right:20px;
+    animation: spin 5s infinite alternate; 
+    z-index: 0;
+   
+}
+
+@keyframes spin {
+    0%{
+        transform:rotate(0deg);
+        
+    }
+    100%{
+        transform:rotate(360deg);
+      
+    }
+}
+.circle{
+    position: absolute;
+    width:30px;
+    height:30px;
+    border: 3px solid #BD1616;
+    border-radius: 50%;
+    animation:moved 2.5s infinite alternate;
+    top:30px;
+    z-index: 0;
+}
+.triangle{
+    width: 0;
+	height: 0;
+	border-top: 15px solid transparent;
+	border-right: 30px solid #ff7300;
+	border-bottom: 15px solid transparent;
+    animation:moves 3s infinite alternate;
+    right:40%;
+    position: absolute;
+    z-index: 0;
+}
+@keyframes moves{
+    0%{
+        transform:translateY(0px);
+    }
+    100%{
+        transform:translateY(-20px);
+    }
+}
+@keyframes moved{
+    0%{
+        transform:translateY(0px);
+    }
+    100%{
+        transform:translateY(20px);
+    }
+}
+.square-2{
+    top:50px;
+    right:20%;
+}
+.circle-2{
+    right:10%;
+    top:50%;
+}
+.triangle-2{
+  bottom:30px;
+  left:20px;
+}
+.square-3{
+    left:20%;
+    bottom:15%;
+}
+.circle-3{
+  top:65%;
+  right:55%;
+}
+.triangle-3{
+    top:10%;
+    left:30%;
+}
+.square-4{
+    bottom:20%;
+    right:25%;
+}
+.circle-4{
+  right:40%;
+  top:15%;
+}
+.triangle-4{
+    top:20%;
+    right:30px;
+}
+.about-content{
+    display: flex;
+    justify-content: space-between;
+    text-align: justify;
+    
+}
+.about-content img,.about-me-img{
+    
+    width:50%;
+    height: 50%;
+    margin-left: 80px;
+}
+.about-me{
+    width:60%;
+}
+.skills h1, .accomplishments h1{
+    text-align: center;
+    margin:30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.grid-cont div img{
+    width:80px;
+    height:80px;
+}
+.grid-cont{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap:50px;
+}
+.grid-item {
+    text-align: center;
+    
+   
+}
+
+.projects{
+    background-color: #FFEBC9;
+    padding: 30px;
+    position: relative;
+    
+}
+.grid-item-img{
+    margin-bottom: -8px;
+}
+
+.description{
+    background-color: aliceblue;
+    width:320px;
+    
+}
+.experience h1{
+    margin-bottom: 30px;
+}
+.inner-div{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap:10px;
+}
+.experience{
+    padding:30px;
+}
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* The actual timeline (the vertical ruler) */
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #670000;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+  
+  /* Container around content */
+  .container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+  }
+  
+  /* The circles on the timeline */
+  .container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #FF9F55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  /* Place the container to the left */
+  .left {
+    left: 0;
+  }
+  
+  /* Place the container to the right */
+  .right {
+    left: 50%;
+  }
+  
+  /* Add arrows to the left container (pointing right) */
+  .left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid #670000;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #670000;
+  }
+  
+  /* Add arrows to the right container (pointing left) */
+  .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid #670000;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #670000 transparent transparent;
+  }
+  
+  /* Fix the circle for containers on the right side */
+  .right::after {
+    left: -16px;
+  }
+  
+  /* The actual content */
+  .content-experience {
+    padding: 20px 30px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    position: relative;
+    border-radius: 20px;
+  }
+  
+  /* Media queries - Responsive timeline on screens less than 600px wide */
+  @media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+    .timeline::after {
+      left: 31px;
+    }
+  
+  /* Full-width containers */
+    .container {
+      width: 100%;
+      padding-left: 70px;
+      padding-right: 25px;
+    }
+  
+  /* Make sure that all arrows are pointing leftwards */
+    .container::before {
+      left: 60px;
+      border: medium solid white;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent white transparent transparent;
+    }
+  
+  /* Make sure all circles are at the same spot */
+    .left::after, .right::after {
+      left: 15px;
+    }
+  
+  /* Make all right containers behave like the left ones */
+    .right {
+      left: 0%;
+    }
+  }
+  .cards-cont{
+      display: flex;
+      justify-content: space-between;
+  }
+  .cards h3{
+      color:#670000
+  }
+  .cards{
+      border-radius: 20px;
+      border:1px solid #FFEBC9;
+      padding:30px;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      cursor: pointer;
+  }
+  .cards:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+
+  }
+  .accomplishments{
+      padding: 30px;
+      margin-bottom: 80px;
+  }
+  .footer{
+      background-color: #FFEBC9;
+      padding:30px;
+      position: relative;
+      padding-bottom: 30px;
+      margin-top: 50px;
+  }
