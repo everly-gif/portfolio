@@ -49,7 +49,7 @@ body{
 }
 .toggle-button{
     position: absolute;
-    top:2.3rem;
+    top:1rem;
     right:1rem;
     display:none;
     flex-direction: column;
@@ -96,8 +96,13 @@ body{
     justify-content: center;
     
 }
+.content p{
+    font-size: 24px;
+    z-index:50;
+}
 .name{
     font-size:50px;
+    z-index:50;
 }
 .about h1,.skills h1,.projects h1,.experience ,.accomplishments h1,.footer h1{
     color:#670000;
@@ -422,6 +427,9 @@ body{
       padding-bottom: 30px;
       margin-top: 50px;
   }
+  .footer h1 p a{
+      z-index:50;
+  }
   @media (max-width: 1024px){
     .toggle-button{
         display: flex;
@@ -576,4 +584,20 @@ body{
         justify-content: center;
         align-items: center;
     } */
+    .about-me-img {
+        width:300px;
+    }
+}
+@media(max-width:440px){
+    .name{
+        font-size: 28px;
+    }
+    .content p{
+        font-size: 16px;
+    }
+}
+@media(max-width:331px){
+    .about-me-img{
+        width:250px;
+    }
 }
