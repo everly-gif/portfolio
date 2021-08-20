@@ -430,7 +430,7 @@ body{
   .footer h1 p a{
       z-index:50;
   }
-  @media (max-width: 1024px){
+  @media (max-width: 1163px){
     .toggle-button{
         display: flex;
     }
@@ -443,6 +443,9 @@ body{
         
        
 
+    }
+    .brand{
+        margin-top:12px;
     }
     .r-nav li a:hover  {
         background-color: transparent;
