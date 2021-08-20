@@ -257,8 +257,14 @@ body{
 }
 .inner-div{
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-template-columns: auto auto auto auto;
     gap:10px;
+}
+.projects-grid{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .experience{
     padding:30px;
@@ -416,3 +422,158 @@ body{
       padding-bottom: 30px;
       margin-top: 50px;
   }
+  @media (max-width: 1024px){
+    .toggle-button{
+        display: flex;
+    }
+    .r-nav{
+        display: none;
+        width:100%;
+        padding:20px 0px;
+        z-index:100;
+        background-color: #eef2fc;
+        
+       
+
+    }
+    .r-nav li a:hover  {
+        background-color: transparent;
+        color:#ff7300;
+    }
+
+    #sign-in{
+        background-color: transparent;
+        color:#344fa1;
+        font-weight: bolder;
+    }
+    #sign-in:hover{
+        border:none;
+        background-color: transparent;
+        color:#ff7300 ;
+    }
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar ul{
+        width:100%;
+        flex-direction: column;
+    } 
+    .r-nav li{
+        text-align: center;
+    }
+    .r-nav li a{
+        padding: .5rem 1rem;
+    }
+    .inner-cont{
+        width:200px;
+        height:200px;
+    }
+    .r-nav.act{
+    display: flex;
+    }
+    
+
+    
+   
+}
+@media(max-width:1319px){
+    .cards-cont{
+        display: grid;
+        grid-template-columns: auto auto;
+        gap:30px;
+    }
+    .accomplishments{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    
+}
+@media (max-width:1107px){
+    .about-content{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .about h1{
+        text-align: center;
+    }
+    .about{
+        padding:8px;
+    }
+    .about-me-img{
+        margin:0;
+        margin:30px 0px;
+        width:500px;
+        text-align: center;
+    
+    }
+    .about-me-img img{
+        margin:0;
+        
+    }
+    .skills h1{
+        margin-top: 20px;
+    }
+  .about-me{
+      width:80%;
+  }
+}
+@media (max-width:1277px){
+    .inner-div{
+        grid-template-columns: auto auto auto;
+    }
+    .projects-grid{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 20px;
+    }
+}
+@media (max-width:1013px){
+    .inner-div{
+        grid-template-columns: auto auto ;
+    }
+   
+}
+@media (max-width:1013px){
+    .inner-div{
+        grid-template-columns: auto;
+    }
+   
+}
+@media (max-width:570px) {
+    .grid-cont{
+        grid-template-columns: auto auto auto;
+    }
+    .cards-cont{
+        grid-template-columns: auto;
+    }
+}
+@media (max-width:500px){
+    .grid-cont{
+        grid-template-columns: auto auto;
+    }
+    .grid-cont-parent{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    /* .inner-div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .projects-grid{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    } */
+}
