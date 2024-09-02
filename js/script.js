@@ -21,7 +21,7 @@ $(document).ready(function () {
         url: "https://api.github.com/search/repositories?q=user:everly-gif+topic:project",
         method: "GET",
         headers: {
-            'Authorization': 'Bearer <TOKEN>'
+            'Authorization': 'Bearer'
         },
         success: function (result) {
             for (let i = 0; i < result.items.length; i++) {
