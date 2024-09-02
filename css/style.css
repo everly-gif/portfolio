@@ -1,307 +1,399 @@
-*{
+* {
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
-    margin:0;
-    padding:0;
-   
-    
+    margin: 0;
+    padding: 0;
+
+
 }
-html{
+
+html {
     scroll-behavior: smooth;
 }
-body{
-    background-color: #FFEBC9;
+
+body {
+    background-color: #000;
 }
-.intro{
-   background-color: #FFEBC9;
-  color:#670000;
-  padding:30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
-  height:85vh;
+
+.intro {
+    background-color: #000;
+    color: #fff;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    height: 85vh;
+    top:75px;
+
 }
-.brand{
+
+.brand {
     font-family: 'Cedarville Cursive', cursive;
+    color: white;
 }
-.navbar{
+
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
     padding: 5px 5px;
-    background-color: #FFEBC9;
+    background-color: #000;
 }
-.r-nav ul{
+
+.r-nav ul {
     margin: 0;
     padding: 0;
     display: flex;
 }
-.r-nav li{
-    list-style:none;
-    margin:10px;
-}
-.r-nav a{
-    text-decoration: none;
-    padding:1rem;
-    display: block;
-    color:#000;
-}
-.toggle-button{
-    position: absolute;
-    top:1rem;
-    right:1rem;
-    display:none;
-    flex-direction: column;
-    justify-content: space-between;
-    width:30px;
-    height:21px;
-}
-.toggle-button .bar{
-    height:3px;
-    width:100%;
-    border-radius: 10px;
-    background-color: black;
+
+.r-nav li {
+    list-style: none;
+    margin: 10px;
 }
 
-.r-nav li a{
+.r-nav a {
+    text-decoration: none;
+    padding: 1rem;
+    display: block;
+    color: #fff;
+}
+
+.toggle-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.r-nav li a {
     transition: all 0.3s ease 0s;
 
 }
-.r-nav li a:hover{
 
-    color:#ff7300;
-    
-}
-.connect-btn{
-    background-color: #670000;
-    
-    padding:0px;
+.r-nav li a:hover {
+
+    color: #ff7300;
 
 }
-.connect-btn a{
-    color:white;
+
+.connect-btn {
+    background-color: #fff;
+    padding: 0px;
+
 }
-.connect-btn:hover{
+
+.connect-btn a {
+    color: #000;
+}
+
+.connect-btn:hover {
     cursor: pointer;
 }
-.brand{
+
+.brand {
     font-size: 20px;
 }
+
 /* Navbar css ends*/
 
-.content{
+.content {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
+
 }
-.content p{
+
+.content p {
     font-size: 24px;
-    z-index:50;
+    z-index: 50;
 }
-.name{
-    font-size:50px;
-    z-index:50;
+
+.name {
+    font-size: 50px;
+    z-index: 50;
 }
-.about h1,.skills h1,.projects h1,.experience ,.accomplishments h1,.footer h1{
-    color:#670000;
-    margin:30px 0px;
+
+.about h1,
+.skills h1,
+.projects h1,
+.experience,
+.accomplishments h1,
+.footer h1 {
+    color: #ff7300;
+    margin: 30px 0px;
+    margin-top: 80px;
 }
-.about{
-    padding:30px;
+
+.about {
+    padding: 30px;
+    color: white;
 }
-.square{
+
+.square {
     position: absolute;
-    width:20px;
-    height:20px;
+    width: 20px;
+    height: 20px;
     border: 3px solid #FF2626;
-    bottom:20px;
-    right:20px;
-    animation: spin 5s infinite alternate; 
+    bottom: 20px;
+    right: 20px;
+    animation: spin 5s infinite alternate;
     z-index: 0;
-   
+
 }
 
 @keyframes spin {
-    0%{
-        transform:rotate(0deg);
-        
+    0% {
+        transform: rotate(0deg);
+
     }
-    100%{
-        transform:rotate(360deg);
-      
+
+    100% {
+        transform: rotate(360deg);
+
     }
 }
-.circle{
+
+.circle {
     position: absolute;
-    width:30px;
-    height:30px;
+    width: 30px;
+    height: 30px;
     border: 3px solid #BD1616;
     border-radius: 50%;
-    animation:moved 2.5s infinite alternate;
-    top:30px;
+    animation: moved 2.5s infinite alternate;
+    top: 30px;
     z-index: 0;
 }
-.triangle{
+
+.triangle {
     width: 0;
-	height: 0;
-	border-top: 15px solid transparent;
-	border-right: 30px solid #ff7300;
-	border-bottom: 15px solid transparent;
-    animation:moves 3s infinite alternate;
-    right:40%;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-right: 30px solid #ff7300;
+    border-bottom: 15px solid transparent;
+    animation: moves 3s infinite alternate;
+    right: 40%;
     position: absolute;
     z-index: 0;
 }
-@keyframes moves{
-    0%{
-        transform:translateY(0px);
+
+@keyframes moves {
+    0% {
+        transform: translateY(0px);
     }
-    100%{
-        transform:translateY(-20px);
-    }
-}
-@keyframes moved{
-    0%{
-        transform:translateY(0px);
-    }
-    100%{
-        transform:translateY(20px);
+
+    100% {
+        transform: translateY(-20px);
     }
 }
-.square-2{
-    top:50px;
-    right:20%;
+
+@keyframes moved {
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(20px);
+    }
 }
-.circle-2{
-    right:10%;
-    top:50%;
+
+.square-2 {
+    top: 50px;
+    right: 20%;
 }
-.triangle-2{
-  bottom:30px;
-  left:20px;
+
+.circle-2 {
+    right: 10%;
+    top: 50%;
 }
-.square-3{
-    left:20%;
-    bottom:15%;
+
+.triangle-2 {
+    bottom: 30px;
+    left: 20px;
 }
-.circle-3{
-  top:65%;
-  right:55%;
+
+.square-3 {
+    left: 20%;
+    bottom: 15%;
 }
-.triangle-3{
-    top:10%;
-    left:30%;
+
+.circle-3 {
+    top: 65%;
+    right: 55%;
 }
-.square-4{
-    bottom:20%;
-    right:25%;
+
+.triangle-3 {
+    top: 10%;
+    left: 30%;
 }
-.circle-4{
-  right:40%;
-  top:15%;
+
+.square-4 {
+    bottom: 20%;
+    right: 25%;
 }
-.triangle-4{
-    top:20%;
-    right:30px;
+
+.circle-4 {
+    right: 40%;
+    top: 15%;
 }
-.about-content{
+
+.triangle-4 {
+    top: 20%;
+    right: 30px;
+}
+
+.about-content {
     display: flex;
+    gap: 50px;
     justify-content: space-between;
     text-align: justify;
-    
+
 }
-.about-content img,.about-me-img{
-    
-    width:50%;
+
+.about-me ul li {
+    margin-bottom: 20px;
+    list-style: none;
+}
+
+.about-content img,
+.about-me-img {
+
+    width: 50%;
     height: 50%;
     margin-left: 80px;
 }
-.about-me{
-    width:60%;
+
+.about-me {
+    width: 60%;
 }
-.skills h1, .accomplishments h1{
+
+.skills h1,
+.accomplishments h1 {
     text-align: center;
-    margin:30px;
+    margin: 30px;
     margin-top: 50px;
     margin-bottom: 50px;
 }
-.grid-cont div img{
-    width:80px;
-    height:80px;
-}
-.grid-cont{
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    gap:50px;
-}
-.grid-item {
-    text-align: center;
-    
-   
+
+.grid-cont div img {
+    width: 80px;
+    height: 80px;
 }
 
-.projects{
-    background-color: #FFEBC9;
-    padding: 30px;
-    position: relative;
-    
+.grid-cont {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 50px;
 }
-.grid-item-img{
+
+.grid-item {
+    text-align: center;
+
+
+}
+
+.project-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.project-card {
+    width: 23%;
+    min-width: 320px;
+    border: 1px solid white;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 20px;
+}
+
+.projects {
+    background-color: #000;
+    padding: 30px;
+    color: white;
+    position: relative;
+
+}
+
+.skill-domain {
+    font-weight: 550;
+}
+
+.grid-item-img {
     margin-bottom: -8px;
 }
 
-.description{
+.description {
     background-color: aliceblue;
-    width:320px;
-    
+    width: 320px;
+
 }
-.experience h1{
+
+.experience h1 {
     margin-bottom: 30px;
 }
-.inner-div{
+
+.inner-div {
     display: grid;
     grid-template-columns: auto auto auto auto;
-    gap:10px;
+    gap: 10px;
 }
-.projects-grid{
+
+.projects-grid {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.experience{
-    padding:30px;
+
+.experience {
+    padding: 30px;
 }
+
 .timeline {
     position: relative;
     max-width: 1200px;
     margin: 0 auto;
-  }
-  
-  /* The actual timeline (the vertical ruler) */
-  .timeline::after {
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
     content: '';
     position: absolute;
     width: 6px;
-    background-color: #670000;
+    background-color: #ff7300;
     top: 0;
     bottom: 0;
     left: 50%;
     margin-left: -3px;
-  }
-  
-  /* Container around content */
-  .container {
+}
+
+/* Container around content */
+.container {
     padding: 10px 40px;
     position: relative;
     background-color: inherit;
     width: 50%;
-  }
-  
-  /* The circles on the timeline */
-  .container::after {
+}
+
+/* The circles on the timeline */
+.container::after {
     content: '';
     position: absolute;
     width: 25px;
@@ -312,20 +404,20 @@ body{
     top: 15px;
     border-radius: 50%;
     z-index: 1;
-  }
-  
-  /* Place the container to the left */
-  .left {
+}
+
+/* Place the container to the left */
+.left {
     left: 0;
-  }
-  
-  /* Place the container to the right */
-  .right {
+}
+
+/* Place the container to the right */
+.right {
     left: 50%;
-  }
-  
-  /* Add arrows to the left container (pointing right) */
-  .left::before {
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
     content: " ";
     height: 0;
     position: absolute;
@@ -333,13 +425,13 @@ body{
     width: 0;
     z-index: 1;
     right: 30px;
-    border: medium solid #670000;
+    border: medium solid #fff;
     border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent #670000;
-  }
-  
-  /* Add arrows to the right container (pointing left) */
-  .right::before {
+    border-color: transparent transparent transparent #fff;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
     content: " ";
     height: 0;
     position: absolute;
@@ -347,197 +439,230 @@ body{
     width: 0;
     z-index: 1;
     left: 30px;
-    border: medium solid #670000;
+    border: medium solid #fff;
     border-width: 10px 10px 10px 0;
-    border-color: transparent #670000 transparent transparent;
-  }
-  
-  /* Fix the circle for containers on the right side */
-  .right::after {
-    left: -16px;
-  }
-  
-  /* The actual content */
-  .content-experience {
-    padding: 20px 30px;
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    position: relative;
-    border-radius: 20px;
-  }
-  
-  /* Media queries - Responsive timeline on screens less than 600px wide */
-  @media screen and (max-width: 600px) {
-  /* Place the timelime to the left */
-    .timeline::after {
-      left: 31px;
-    }
-  
-  /* Full-width containers */
-    .container {
-      width: 100%;
-      padding-left: 70px;
-      padding-right: 25px;
-    }
-  
-  /* Make sure that all arrows are pointing leftwards */
-    .container::before {
-      left: 60px;
-      border: medium solid white;
-      border-width: 10px 10px 10px 0;
-      border-color: transparent white transparent transparent;
-    }
-  
-  /* Make sure all circles are at the same spot */
-    .left::after, .right::after {
-      left: 15px;
-    }
-  
-  /* Make all right containers behave like the left ones */
-    .right {
-      left: 0%;
-    }
-  }
-  .cards-cont{
-      display: flex;
-      justify-content: space-between;
-  }
-  .cards h3{
-      color:#670000
-  }
-  .cards{
-      border-radius: 20px;
-      border:1px solid #FFEBC9;
-      padding:30px;
-      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-      cursor: pointer;
-  }
-  .cards:hover{
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    border-color: transparent #fff transparent transparent;
+}
 
-  }
-  .accomplishments{
-      padding: 30px;
-      margin-bottom: 80px;
-  }
-  .footer{
-      background-color: #FFEBC9;
-      padding:30px;
-      position: relative;
-      padding-bottom: 30px;
-      margin-top: 50px;
-  }
-  .footer h1 p a{
-      z-index:50;
-  }
-  @media (max-width: 1163px){
-    .toggle-button{
+/* Fix the circle for containers on the right side */
+.right::after {
+    left: -16px;
+}
+
+/* The actual content */
+.content-experience {
+    padding: 20px 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    position: relative;
+    color: white;
+    border-radius: 20px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+
+    /* Place the timelime to the left */
+    .timeline::after {
+        left: 31px;
+    }
+
+    /* Full-width containers */
+    .container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    /* Make sure that all arrows are pointing leftwards */
+    .container::before {
+        left: 60px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+    }
+
+    /* Make sure all circles are at the same spot */
+    .left::after,
+    .right::after {
+        left: 15px;
+    }
+
+    /* Make all right containers behave like the left ones */
+    .right {
+        left: 0%;
+    }
+}
+
+.cards-cont {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cards h3 {
+    color: #000;
+}
+
+.cards {
+    border-radius: 20px;
+    border: 1px solid #000;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.cards:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+
+}
+
+.accomplishments {
+    padding: 30px;
+    margin-bottom: 80px;
+}
+
+.footer {
+    background-color: #000;
+    padding: 30px;
+    color: white;
+    position: relative;
+    padding-bottom: 30px;
+    margin-top: 50px;
+}
+
+.footer h1 p a {
+    z-index: 50;
+}
+
+@media (max-width: 1163px) {
+    .toggle-button {
         display: flex;
     }
-    .r-nav{
+
+    .r-nav {
         display: none;
-        width:100%;
-        padding:20px 0px;
-        z-index:100;
-        background-color: #eef2fc;
-        
-       
+        width: 100%;
+        padding: 20px 0px;
+        z-index: 100;
+        background-color: #000;
+
+
 
     }
-    .brand{
-        margin-top:12px;
-    }
-    .r-nav li a:hover  {
-        background-color: transparent;
-        color:#ff7300;
+
+    .brand {
+        margin-top: 12px;
     }
 
-    #sign-in{
+    .r-nav li a:hover {
         background-color: transparent;
-        color:#344fa1;
+        color: #ff7300;
+    }
+
+    #sign-in {
+        background-color: transparent;
+        color: #344fa1;
         font-weight: bolder;
     }
-    #sign-in:hover{
-        border:none;
+
+    #sign-in:hover {
+        border: none;
         background-color: transparent;
-        color:#ff7300 ;
+        color: #ff7300;
     }
-    .navbar{
+
+    .navbar {
         flex-direction: column;
         align-items: flex-start;
     }
-    .navbar ul{
-        width:100%;
+
+    .navbar ul {
+        width: 100%;
         flex-direction: column;
-    } 
-    .r-nav li{
+    }
+
+    .r-nav li {
         text-align: center;
     }
-    .r-nav li a{
+
+    .r-nav li a {
         padding: .5rem 1rem;
     }
-    .inner-cont{
-        width:200px;
-        height:200px;
-    }
-    .r-nav.act{
-    display: flex;
-    }
-    
 
-    
-   
+    .inner-cont {
+        width: 200px;
+        height: 200px;
+    }
+
+    .r-nav.act {
+        display: flex;
+    }
+
+
+
+
 }
-@media(max-width:1319px){
-    .cards-cont{
+
+@media(max-width:1319px) {
+    .cards-cont {
         display: grid;
         grid-template-columns: auto auto;
-        gap:30px;
+        gap: 30px;
     }
-    .accomplishments{
+
+    .accomplishments {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
 
-    
+
 }
-@media (max-width:1107px){
-    .about-content{
+
+@media (max-width:1107px) {
+    .about-content {
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    .about h1{
+
+    .about h1 {
         text-align: center;
     }
-    .about{
-        padding:8px;
+
+    .about {
+        padding: 8px;
     }
-    .about-me-img{
-        margin:0;
-        margin:30px 0px;
-        width:500px;
+
+    .about-me-img {
+        margin: 0;
+        margin: 30px 0px;
+        width: 500px;
         text-align: center;
-    
+
     }
-    .about-me-img img{
-        margin:0;
-        
+
+    .about-me-img img {
+        margin: 0;
+
     }
-    .skills h1{
+
+    .skills h1 {
         margin-top: 20px;
     }
-  .about-me{
-      width:80%;
-  }
+
+    .about-me {
+        width: 80%;
+    }
 }
-@media (max-width:1277px){
-    .inner-div{
+
+@media (max-width:1277px) {
+    .inner-div {
         grid-template-columns: auto auto auto;
     }
-    .projects-grid{
+
+    .projects-grid {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -545,36 +670,43 @@ body{
         margin: 20px;
     }
 }
-@media (max-width:1013px){
-    .inner-div{
-        grid-template-columns: auto auto ;
-    }
-   
-}
-@media (max-width:1013px){
-    .inner-div{
-        grid-template-columns: auto;
-    }
-   
-}
-@media (max-width:570px) {
-    .grid-cont{
-        grid-template-columns: auto auto auto;
-    }
-    .cards-cont{
-        grid-template-columns: auto;
-    }
-}
-@media (max-width:500px){
-    .grid-cont{
+
+@media (max-width:1013px) {
+    .inner-div {
         grid-template-columns: auto auto;
     }
-    .grid-cont-parent{
+
+}
+
+@media (max-width:1013px) {
+    .inner-div {
+        grid-template-columns: auto;
+    }
+
+}
+
+@media (max-width:570px) {
+    .grid-cont {
+        grid-template-columns: auto auto auto;
+    }
+
+    .cards-cont {
+        grid-template-columns: auto;
+    }
+}
+
+@media (max-width:500px) {
+    .grid-cont {
+        grid-template-columns: auto auto;
+    }
+
+    .grid-cont-parent {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
+
     /* .inner-div{
         display: flex;
         flex-direction: column;
@@ -588,19 +720,22 @@ body{
         align-items: center;
     } */
     .about-me-img {
-        width:300px;
+        width: 300px;
     }
 }
-@media(max-width:440px){
-    .name{
+
+@media(max-width:440px) {
+    .name {
         font-size: 28px;
     }
-    .content p{
+
+    .content p {
         font-size: 16px;
     }
 }
-@media(max-width:331px){
-    .about-me-img{
-        width:250px;
+
+@media(max-width:331px) {
+    .about-me-img {
+        width: 250px;
     }
 }
