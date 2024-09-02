@@ -463,7 +463,7 @@ body {
 
     /* Place the timelime to the left */
     .timeline::after {
-        left: 31px;
+        left: 20px;
     }
 
     /* Full-width containers */
@@ -476,18 +476,20 @@ body {
     .content-experience {
         padding: unset;
     }
+  
     /* Make sure that all arrows are pointing leftwards */
     .container::before {
-        left: 60px;
-        border: medium solid white;
+        /* left: 60px; */
+        display: none;
+        /* border: medium solid white;
         border-width: 10px 10px 10px 0;
-        border-color: transparent white transparent transparent;
+        border-color: transparent white transparent transparent; */
     }
 
     /* Make sure all circles are at the same spot */
     .left::after,
     .right::after {
-        left: 15px;
+        left: 5px;
     }
 
     /* Make all right containers behave like the left ones */

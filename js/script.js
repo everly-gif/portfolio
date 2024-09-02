@@ -8,7 +8,7 @@ $(document).ready(function () {
 
 
     })
- 
+   
 
     $(".project-card").click(function () {
         window.open($(this).find(".redirect_url").text(), '_blank');
@@ -21,7 +21,7 @@ $(document).ready(function () {
         url: "https://api.github.com/search/repositories?q=user:everly-gif+topic:project",
         method: "GET",
         headers: {
-            'Authorization': 'Bearer'
+            'Authorization': 'Bearer '
         },
         success: function (result) {
             for (let i = 0; i < result.items.length; i++) {
